@@ -21,3 +21,15 @@ console.log(fs);
 
 //Scrivo su un file
 fs.appendFileSync('myFile','info\n');
+
+//importo il pacchetto validator come fosse un modulo nativo di node
+const validator = require('validator');
+
+console.log(validator);
+
+var checkValid = validator.isEmail('geloso86@gmail.com');
+var checkNotValid = validator.isEmail('geloso86@@@gmail.com');
+
+console.log(checkValid);
+console.log(checkNotValid);
+console.log('ciao')
